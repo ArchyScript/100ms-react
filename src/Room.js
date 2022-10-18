@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Stream from './Stream'
 import ChatNdParticipants from './ChatNdParticipants'
 import Controls from './Controls'

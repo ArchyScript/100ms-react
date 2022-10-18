@@ -12,17 +12,13 @@ function JoinRoom() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const REACT_APP_TOKEN_ENDPOINT =
-      'https://prod-in2.100ms.live/hmsapi/scripted.app.100ms.live/'
-    const REACT_APP_ROOM_ID = '634b79f2e08863a3f2f9059f'
-
-    const response = await fetch(`${REACT_APP_TOKEN_ENDPOINT}api/token`, {
+    const response = await fetch(`${ENDPOINT}api/token`, {
       method: 'POST',
       body: JSON.stringify({
         user_id: `${Date.now()}`,
-        role: selectedRole, //broadcaster, hls-viewer
+        role: selectedRole,
         type: 'app',
-        room_id: REACT_APP_ROOM_ID,
+        room_id: ROOM_ID,
       }),
     })
 
